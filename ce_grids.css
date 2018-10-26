@@ -14,16 +14,20 @@
 
 
 /* Grid Rows Styles */
+/* These stlyes affect the divisions with the class name of row to change the width and display the row only when it’s clear of floated content on both margins. */
 div.row {
     width: 100%;
     clear: both;
 }
 
-div.row {
-    float: left;
+div.row::after {
+    clear: both;
+    content: "";
+    display: table;
 }
 
 /* Grid Columns Styles */
+/* These styles affect division elements with the class name containing the word "column" to float them left. Then each column has its individual selector to set the width specific to the size value after "column". */
 div[class^="column"] {
     float: left;
 }
@@ -69,6 +73,7 @@ div.column80 {
 }
 
 /* Grid Spacing Styles */
+/* These styles affect the division elements with specific class names of "container", "row", "cell", and any class containing the word "column", to set their box sizing to border box. */
 div.container,
 div.row,
 div[class^="column"],

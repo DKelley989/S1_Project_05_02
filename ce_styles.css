@@ -13,8 +13,9 @@
 
 
 /* Window and Body Styles */
+/* These stlyes affect the html, body, img elements to change their background color, widths, font family, margins, display stlye, and position. */
 html {
-    color: rgb(101, 101, 101);
+    background-color: rgb(101, 101, 101);
 }
 
 body {
@@ -24,18 +25,22 @@ body {
     width: 95%;
     min-width: 320px;
     max-width: 960px;
+    position: relative;
 }
 
+/* This stlye displays all images as blocks with a width of 100%. */
 img {
     display: block;
     width: 100%;
 }
 
+/* This rule simply removes the underline from hypertext links with navigation lists. */
 nav ul li a {
     text-decoration: none;
 }
 
 /* Body Header Styles */
+/* These styles affect the header, as well as navigation lists and links within them, to change the background color, height, display type, font size and color, margins/padding, and to float the list items left. */
 body header {
     background-color: rgb(191, 68, 70);
     height: 40px;
@@ -62,7 +67,24 @@ body header nav a:hover {
 
 
 /* DIV Container Styles */
+/* These styles affect division elements with specific class names to give them padding, display them as blocks, and to set the widths. */
+div.container {
+    padding: 0px 8px 8px 0px;
+}
 
-
+div.cell a {
+    display: block;
+    width: 100%;
+    padding: 8px 0px 0px 8px;
+}
 
 /* Footer Styles */
+/* This stlye changes the footer's position to absolute, positions the footer 8 pixels to the right and 8 pixels down, changes the text color and font-size, and aligns the text to the right. */
+footer {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    color: rgb(143, 33, 36);
+    text-align: right;
+    font-size: 2vmin;
+}
